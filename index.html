@@ -1,0 +1,1131 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B0910">
+<link rel="icon" href="/api/projects/aadbd483-889d-46bc-b1c8-2a35aa9200ee/raw/favicon.ico?workspaceId=bdzku615sc9tr3tt3m5151el&amp;workspaceMemberId=jm7nz961yf4wvbsvxjvjr6bv" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/api/projects/aadbd483-889d-46bc-b1c8-2a35aa9200ee/raw/favicon-dark-32x32.png?workspaceId=bdzku615sc9tr3tt3m5151el&amp;workspaceMemberId=jm7nz961yf4wvbsvxjvjr6bv" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="16x16" href="/api/projects/aadbd483-889d-46bc-b1c8-2a35aa9200ee/raw/favicon-dark-16x16.png?workspaceId=bdzku615sc9tr3tt3m5151el&amp;workspaceMemberId=jm7nz961yf4wvbsvxjvjr6bv" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="/api/projects/aadbd483-889d-46bc-b1c8-2a35aa9200ee/raw/favicon-32x32.png?workspaceId=bdzku615sc9tr3tt3m5151el&amp;workspaceMemberId=jm7nz961yf4wvbsvxjvjr6bv" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" sizes="16x16" href="/api/projects/aadbd483-889d-46bc-b1c8-2a35aa9200ee/raw/favicon-16x16.png?workspaceId=bdzku615sc9tr3tt3m5151el&amp;workspaceMemberId=jm7nz961yf4wvbsvxjvjr6bv" media="(prefers-color-scheme: light)">
+<link rel="shortcut icon" href="/api/projects/aadbd483-889d-46bc-b1c8-2a35aa9200ee/raw/favicon.ico?workspaceId=bdzku615sc9tr3tt3m5151el&amp;workspaceMemberId=jm7nz961yf4wvbsvxjvjr6bv">
+<link rel="apple-touch-icon" href="/api/projects/aadbd483-889d-46bc-b1c8-2a35aa9200ee/raw/favicon-32x32.png?workspaceId=bdzku615sc9tr3tt3m5151el&amp;workspaceMemberId=jm7nz961yf4wvbsvxjvjr6bv">
+  <title>Vian - Agência digital de performance</title>
+<meta name="description" content="Vian: agência digital especializada em Social Media, Edição de Vídeos/Motion e Landing Pages. Estratégia, design e tecnologia para crescer com consistência.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-a:#0B0910;
+  --bg-b:#14101D;
+  --divider:1px solid rgba(168,85,247,0.12);
+  --surface:rgba(26,21,38,0.75);
+  --border:rgba(168,85,247,0.18);
+  --text:#FFFFFF;
+  --muted:#A1A1AA;
+  --grad-accent:linear-gradient(90deg,#00F0FF,#A855F7);
+  --grad-btn:linear-gradient(135deg,#0EA5E9 0%,#7C3AED 100%);
+  --ease:cubic-bezier(0.22, 1, 0.36, 1);
+  --radius:20px;
+  --container:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Lexend",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  font-weight:300;
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  background:var(--bg-a);
+  min-height:100vh;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+:focus-visible{outline:2px solid #38BDF8;outline-offset:3px}
+.container{width:min(var(--container), calc(100% - 2rem));margin:0 auto}
+.section{padding:5rem 0;position:relative;overflow:hidden}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:#D4D4D8;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--grad-accent);opacity:.9}
+h1,h2,h3{font-family:"Lexend",system-ui,sans-serif;font-weight:300;line-height:1.08;margin:0 0 1rem;color:#fff}
+h1{font-size:clamp(2.4rem,6vw,4.6rem);letter-spacing:-.03em}
+h2{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.02em}
+h3{font-size:1.2rem;font-family:"Lexend",system-ui,sans-serif;font-weight:400}
+p{margin:0 0 1rem;color:var(--muted)}
+.lead{font-size:1.08rem;max-width:60ch}
+.muted{color:var(--muted)}
+.grid{display:grid;gap:1.25rem}
+
+/* Section backgrounds */
+.hero{
+  background:var(--bg-a);
+  padding:calc(80px + 8px) 0 3.5rem;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;left:50%;top:10%;width:80%;height:70%;transform:translateX(-50%);
+  background:radial-gradient(ellipse at 35% 40%, rgba(124,58,237,0.14), transparent 55%),
+             radial-gradient(ellipse at 70% 45%, rgba(168,85,247,0.10), transparent 55%);
+  filter:blur(30px);pointer-events:none;z-index:0;
+}
+.hero > .container{position:relative;z-index:1}
+    .section-bg-beneficios{background:var(--bg-b);border-top:var(--divider)}
+    .section-bg-servicos{background:var(--bg-a);border-bottom:var(--divider);border-top:var(--divider)}
+    .section-bg-portfolio{background:var(--bg-a);border-top:var(--divider)}
+    .section-bg-instagram{background:var(--bg-b);border-top:var(--divider)}
+    .section-bg-motion{background:var(--bg-a);border-top:var(--divider)}
+    .section-bg-planos{background:var(--bg-b);border-top:var(--divider)}
+    .section-bg-final{background:var(--bg-a);border-top:var(--divider)}
+footer,.site-footer{background:var(--bg-a);border-top:1px solid rgba(168,85,247,0.15);padding:3rem 0 1.5rem;color:#71717A}
+
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  height:80px;
+  background:rgba(11,9,16,0);
+  backdrop-filter:blur(0px);
+  -webkit-backdrop-filter:blur(0px);
+  border-bottom:none;
+  transition:background 0.4s cubic-bezier(0.22, 1, 0.36, 1), backdrop-filter 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.site-header::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:1px;
+  width:100%;
+  background:#8B5CF6;
+  box-shadow:0 1px 10px rgba(124,58,237,0.35);
+  transform:scaleX(0);
+  opacity:0;
+  transform-origin:center;
+  transition:transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events:none;
+}
+.site-header.scrolled{
+  background:rgba(11,9,16,0.88);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+.site-header.scrolled::after{
+  transform:scaleX(1);
+  opacity:1;
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:100%;gap:1.5rem}
+.brand{display:inline-flex;align-items:center;gap:.7rem;font-family:"Lexend",system-ui,sans-serif;font-weight:400;font-size:1.2rem;letter-spacing:.02em}
+.brand-mark{width:34px;height:34px;object-fit:contain;flex:0 0 auto}
+    .brand{display:inline-flex;align-items:center}
+    .brand-logo-full{height:56px;width:auto;display:block;object-fit:contain;transition:transform .35s cubic-bezier(0.22,1,0.36,1),filter .35s cubic-bezier(0.22,1,0.36,1)}
+    .brand:hover .brand-logo-full,.brand:focus-visible .brand-logo-full{transform:translateY(-1px) scale(1.015);filter:drop-shadow(0 0 12px rgba(168,85,247,.18))}
+    @media (prefers-reduced-motion: reduce){.brand-logo-full{transition:none !important}.brand:hover .brand-logo-full,.brand:focus-visible .brand-logo-full{transform:none;filter:none}}
+.nav-links{display:none;align-items:center;gap:1.6rem}
+.nav-links a{
+  position:relative;display:inline-flex;align-items:center;
+  padding:.6rem .15rem;
+  font-size:15px;font-weight:400;color:#D4D4D8;
+  transition:color 0.3s var(--ease);
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:.2rem;height:2px;width:100%;
+  background:linear-gradient(90deg,#00F0FF,#A855F7);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.3s var(--ease);
+  border-radius:2px;
+}
+.nav-links a:hover{color:#FFFFFF}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:.7rem}
+
+/* Buttons */
+.btn{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 28px;
+  border-radius:12px;border:none;
+  background:linear-gradient(135deg,#0EA5E9 0%,#7C3AED 100%);
+  color:#FFFFFF;
+  font-size:16px;font-weight:400;line-height:1.2;
+  cursor:pointer;white-space:nowrap;overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.3), 0 8px 20px rgba(14,165,233,0.18), 0 8px 24px rgba(124,58,237,0.18);
+  transition:all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  text-shadow:0 1px 1px rgba(0,0,0,0.15);
+}
+.btn-header{padding:11px 22px;font-size:15px}
+.btn::before{
+  content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+  transform:skewX(-20deg);
+  transition:left 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events:none;
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.35), 0 0 0 1px rgba(255,255,255,0.05), 0 14px 30px rgba(14,165,233,0.28), 0 14px 34px rgba(124,58,237,0.26);
+  filter:saturate(1.08) brightness(1.05);
+}
+.btn:hover::before{left:140%}
+.btn .icon-wrap{display:inline-flex;align-items:center;justify-content:center;transition:transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)}
+.btn:hover .icon-wrap{transform:translateX(3px)}
+.btn svg{width:18px;height:18px}
+
+.menu-toggle{width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#fff;display:inline-grid;place-items:center;cursor:pointer;transition:all 0.3s cubic-bezier(0.22, 1, 0.36, 1)}
+.menu-toggle:hover{border-color:rgba(168,85,247,.4);box-shadow:0 0 0 1px rgba(168,85,247,.2)}
+.menu-toggle svg{width:20px;height:20px}
+.mobile-panel{
+  display:block;max-height:0;opacity:0;transform:translateY(-8px);overflow:hidden;
+  border-top:1px solid rgba(255,255,255,0);padding:0 0;pointer-events:none;
+  background:rgba(11,9,16,0.98);backdrop-filter:blur(12px);
+  transition:max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1), transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), padding 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mobile-panel.open{
+  max-height:340px;opacity:1;transform:translateY(0);padding:.4rem 0 1rem;
+  border-top-color:rgba(168,85,247,0.12);pointer-events:auto;
+}
+.mobile-panel a{display:block;padding:.85rem 0;color:#E4E4E7;font-size:15px;font-weight:400;border-bottom:1px solid rgba(255,255,255,.05);transition:color 0.3s var(--ease), padding-left 0.3s var(--ease)}
+.mobile-panel a:hover{color:#fff;padding-left:.25rem}
+
+/* Hero */
+.hero-grid{display:grid;gap:2rem;align-items:center}
+.hero-copy .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+.hero-points{display:grid;gap:.6rem;margin-top:1.4rem;color:#D4D4D8;font-size:.95rem}
+.hero-points span{display:flex;align-items:center;gap:.55rem}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--grad-accent);box-shadow:0 0 12px rgba(56,189,248,.6)}
+.hero-visual{position:relative;min-height:340px}
+.hero-visual::before{content:"";position:absolute;inset:10% 0 5% 10%;background:radial-gradient(circle at 45% 35%,rgba(124,58,237,.18),transparent 55%),radial-gradient(circle at 65% 60%,rgba(168,85,247,.16),transparent 55%);filter:blur(40px);opacity:.8}
+.showcase{position:relative;border-radius:28px;padding:1rem;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(168,85,247,0.18);box-shadow:0 20px 70px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.03);backdrop-filter:blur(10px)}
+.showcase::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(0,240,255,.45),rgba(168,85,247,.35),rgba(255,255,255,.08));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.showcase-inner{border-radius:20px;background:linear-gradient(180deg,#171225,#100D18);border:1px solid rgba(168,85,247,0.14);padding:1rem;min-height:320px;display:grid;gap:1rem}
+.mock-top{display:flex;align-items:center;justify-content:space-between;color:#A1A1AA;font-size:.8rem}
+.pills{display:flex;gap:.4rem}.pills i{width:8px;height:8px;border-radius:50%;background:#27272A}.pills i:nth-child(1){background:#38BDF8}.pills i:nth-child(2){background:#A855F7}
+.mock-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}
+    .metric{padding:.8rem;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(168,85,247,0.12);transition:transform .12s cubic-bezier(0.22,1,0.36,1),border-color .12s cubic-bezier(0.22,1,0.36,1),background .12s cubic-bezier(0.22,1,0.36,1),box-shadow .12s cubic-bezier(0.22,1,0.36,1)}
+    .metric strong{display:block;font-family:"Lexend",system-ui,sans-serif;font-size:1.05rem;font-weight:400;color:#fff;transition:color .12s cubic-bezier(0.22,1,0.36,1),text-shadow .12s cubic-bezier(0.22,1,0.36,1)}
+    .metric span{font-size:.78rem;color:var(--muted);transition:color .12s cubic-bezier(0.22,1,0.36,1)}
+    .metric:hover{transform:translateY(-4px);border-color:rgba(56,189,248,.24);background:rgba(56,189,248,.06);box-shadow:0 8px 24px rgba(0,0,0,.18),inset 0 0 0 1px rgba(168,85,247,.08)}
+    .metric:hover strong{color:#CFFAFE;text-shadow:0 0 18px rgba(56,189,248,.2)}
+    .metric:hover span{color:#D4D4D8}
+    .mock-chart{height:120px;border-radius:16px;background:linear-gradient(180deg,rgba(56,189,248,.12),rgba(168,85,247,.04));border:1px solid rgba(168,85,247,0.12);position:relative;overflow:hidden;transition:border-color .12s cubic-bezier(0.22,1,0.36,1),box-shadow .12s cubic-bezier(0.22,1,0.36,1)}
+    .mock-chart svg{position:absolute;inset:0;width:100%;height:100%}
+    .mock-chart .chart-plot{transform-origin:0 120px;transition:transform .14s cubic-bezier(0.22,1,0.36,1),filter .14s cubic-bezier(0.22,1,0.36,1);will-change:transform}
+    .mock-chart .chart-grid{transition:opacity .12s cubic-bezier(0.22,1,0.36,1);opacity:.45}
+    .mock-chart .chart-dot,.mock-chart .chart-dot-core{opacity:.75;transition:opacity .12s cubic-bezier(0.22,1,0.36,1)}
+    .chart-growth{position:absolute;top:10px;left:10px;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#00F0FF;background:rgba(11,9,16,.45);border:1px solid rgba(56,189,248,.22);box-shadow:0 6px 16px rgba(0,0,0,.18);opacity:0;transform:translate(-4px,6px) scale(.92);transition:opacity .22s cubic-bezier(0.22,1,0.36,1),transform .22s cubic-bezier(0.22,1,0.36,1);pointer-events:none;z-index:2}
+    .chart-growth svg{width:14px;height:14px;display:block}
+    .mock-chart:hover{border-color:rgba(56,189,248,.22);box-shadow:inset 0 0 0 1px rgba(168,85,247,.08)}
+    .mock-chart:hover .chart-plot{transform:translateY(-8px) scaleY(1.18);filter:drop-shadow(0 -4px 10px rgba(56,189,248,.18))}
+    .mock-chart:hover .chart-grid{opacity:.8}
+    .mock-chart:hover .chart-dot,.mock-chart:hover .chart-dot-core{opacity:1}
+    .mock-chart:hover .chart-growth{opacity:1;transform:translate(0,0) scale(1)}
+    @media (prefers-reduced-motion: reduce){
+      .mock-chart,.mock-chart .chart-plot,.mock-chart .chart-grid,.mock-chart .chart-dot,.mock-chart .chart-dot-core,.chart-growth,.metric,.metric strong,.metric span{transition:none !important}
+      .mock-chart:hover .chart-plot,.mock-chart:hover .chart-growth,.metric:hover{transform:none;filter:none;box-shadow:none;text-shadow:none}
+      .mock-chart .chart-dot,.mock-chart .chart-dot-core{display:none}
+    }
+.mock-list{display:grid;gap:.55rem}
+.mock-row{display:flex;align-items:center;justify-content:space-between;padding:.7rem .8rem;border-radius:12px;background:rgba(255,255,255,.02);border:1px solid rgba(168,85,247,0.1);font-size:.88rem;color:#D4D4D8}
+.badge{font-size:.72rem;color:#CFFAFE;padding:.2rem .5rem;border-radius:999px;background:rgba(0,240,255,.08);border:1px solid rgba(0,240,255,.18)}
+
+/* Cards */
+.card, .glass{
+  background:rgba(26,21,38,0.75);
+  border:1px solid rgba(168,85,247,0.18);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-radius:var(--radius);
+  padding:1.25rem;
+  position:relative;
+  transition:all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card:hover{
+  transform:translateY(-3px);
+  border-color:transparent;
+  background:linear-gradient(rgba(26,21,38,0.78), rgba(26,21,38,0.78)) padding-box, linear-gradient(135deg, rgba(0,240,255,0.6), rgba(168,85,247,0.65)) border-box;
+  box-shadow:0 14px 34px rgba(0,0,0,.28), 0 0 0 1px rgba(255,255,255,0.02) inset;
+}
+.icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.03);border:1px solid rgba(168,85,247,0.18);margin-bottom:.9rem;transition:all 0.3s cubic-bezier(0.22, 1, 0.36, 1)}
+.icon svg{width:22px;height:22px;stroke:url(#grad-stroke);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card:hover .icon{border-color:rgba(0,240,255,.35);box-shadow:0 0 18px rgba(168,85,247,.14)}
+
+.section-head{display:grid;gap:.6rem;margin-bottom:2rem;max-width:760px}
+
+.bento{grid-template-columns:1fr}
+.service-card h3{margin-bottom:.4rem}
+.service-card ul{margin:.8rem 0 0;padding:0;list-style:none;display:grid;gap:.4rem;color:#D4D4D8;font-size:.93rem}
+.service-card li{display:flex;gap:.5rem;align-items:flex-start}
+.service-card li::before{content:"";width:6px;height:6px;margin-top:.55rem;border-radius:50%;background:var(--grad-accent);flex:0 0 auto}
+
+/* Ecossistema Vian */
+.ecosystem-grid{display:grid;gap:2rem;align-items:start}
+.eco-sticky .badge-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .8rem;border-radius:999px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#E9D5FF;background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.28);box-shadow:0 0 18px rgba(168,85,247,.12);margin-bottom:1rem}
+.eco-sticky h2{margin-bottom:1rem}
+.eco-sticky p{margin-bottom:1.4rem;max-width:42ch}
+.bento-eco{display:grid;gap:1rem}
+.eco-card{background:rgba(26,21,38,0.7);border:1px solid rgba(168,85,247,0.18);border-radius:18px;padding:1.2rem;transition:all 0.3s cubic-bezier(0.22,1,0.36,1);backdrop-filter:blur(10px)}
+.eco-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,.28);border-color:rgba(168,85,247,.35)}
+.eco-card h3{margin-bottom:.35rem}
+.eco-card p{margin-bottom:.8rem;color:#C7CAD1;font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin:0;padding:0;list-style:none}
+.tags li{font-size:.78rem;color:#E4E4E7;padding:.28rem .55rem;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(168,85,247,0.18)}
+
+/* Diferenciais & Prova Social (Bento) */
+.bento-floor{display:grid;gap:1rem}
+.bento-floor-1{grid-template-columns:1fr}
+.bento-card{background:rgba(26,21,38,0.75);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(168,85,247,0.18);border-radius:20px;padding:28px;transition:transform 0.3s cubic-bezier(0.22,1,0.36,1), border-color 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s cubic-bezier(0.22,1,0.36,1);height:100%}
+.bento-card:hover{transform:translateY(-3px);border-color:rgba(168,85,247,0.32);box-shadow:0 12px 28px rgba(0,0,0,0.2)}
+.bento-pilar{display:flex;flex-direction:column}
+.bento-pilar h3{margin-bottom:.35rem}
+
+/* Portfolio */
+.carousel-wrap{position:relative}
+.carousel{display:grid;grid-auto-flow:column;grid-auto-columns:85%;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:.2rem .2rem 1rem;scrollbar-width:none}
+.carousel::-webkit-scrollbar{display:none}
+.work{scroll-snap-align:start;border-radius:18px;overflow:hidden;border:1px solid transparent;background:linear-gradient(rgba(20,16,29,0.85),rgba(20,16,29,0.85)) padding-box, linear-gradient(135deg, rgba(168,85,247,0.18), rgba(168,85,247,0.18)) border-box;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s cubic-bezier(0.22,1,0.36,1)}
+.work:hover{transform:translateY(-4px);background:linear-gradient(rgba(20,16,29,0.85),rgba(20,16,29,0.85)) padding-box, linear-gradient(135deg, #0EA5E9, #A855F7) border-box;box-shadow:0 16px 34px rgba(0,0,0,.28)}
+.work-media{position:relative;overflow:hidden;background:linear-gradient(135deg,#181326,#0f0c17)}
+.media-frame{position:absolute;inset:0;overflow:hidden}
+.media-content{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s cubic-bezier(0.22,1,0.36,1)}
+.work:hover .media-content{transform:scale(1.02)}
+.media-badge{position:absolute;top:.7rem;left:.7rem;z-index:3;display:inline-flex;align-items:center;padding:.28rem .55rem;border-radius:999px;font-size:.72rem;color:#F3E8FF;background:rgba(11,9,16,0.55);border:1px solid rgba(168,85,247,0.28);backdrop-filter:blur(6px)}
+.media-indicator{position:absolute;right:.7rem;bottom:.7rem;z-index:3;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;background:rgba(11,9,16,0.55);border:1px solid rgba(168,85,247,0.28);backdrop-filter:blur(6px)}
+.media-indicator svg{width:14px;height:14px;display:block}
+.media-placeholder{position:absolute;inset:0;display:flex;align-items:flex-end;padding:1rem;background:linear-gradient(180deg,rgba(20,16,29,0.1) 0%, rgba(11,9,16,0.55) 100%);pointer-events:none}
+.media-placeholder span{font-size:.72rem;color:#D4D4D8;background:rgba(255,255,255,0.06);border:1px dashed rgba(168,85,247,0.35);padding:.28rem .5rem;border-radius:8px}
+.media-feed{aspect-ratio:4/5}
+.media-reels{aspect-ratio:9/16;max-height:420px}
+.media-web{aspect-ratio:16/10;background:#0d0c14}
+.browser-bar{position:absolute;top:0;left:0;right:0;height:30px;display:flex;align-items:center;gap:.35rem;padding:0 .7rem;background:rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.08);z-index:2}
+.browser-bar i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.28);display:block}
+.browser-screen{position:absolute;inset:30px 0 0 0;overflow:hidden}
+.feed-collage{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1.2fr .8fr;gap:8px;padding:12px}
+.feed-collage div{border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:linear-gradient(135deg,rgba(56,189,248,0.18),rgba(168,85,247,0.22))}
+.feed-collage .f1{grid-column:1/3}
+.reels-visual{position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(168,85,247,0.35),transparent 45%), radial-gradient(circle at 70% 70%,rgba(56,189,248,0.25),transparent 40%), linear-gradient(180deg,#14101D 0%, #0B0910 100%)}
+.reels-bars{position:absolute;left:12px;right:12px;bottom:14px;display:grid;gap:6px}
+.reels-bars span{height:8px;border-radius:999px;background:rgba(255,255,255,0.18)}
+.reels-bars span:nth-child(2){width:70%;background:linear-gradient(90deg,rgba(56,189,248,.7),rgba(168,85,247,.7))}
+.reels-bars span:nth-child(3){width:45%}
+.web-preview{position:absolute;inset:0;padding:14px;display:grid;gap:8px;align-content:start;transition:transform 4s ease-in-out}
+.work:hover .web-preview{transform:translateY(-18%)}
+.web-preview .w-hero{height:42%;border-radius:12px;background:linear-gradient(135deg,rgba(56,189,248,0.2),rgba(168,85,247,0.25));border:1px solid rgba(255,255,255,0.08)}
+.web-preview .w-line{height:10px;border-radius:999px;background:rgba(255,255,255,0.16)}
+.web-preview .w-line.short{width:60%}
+.web-preview .w-cta{height:34px;width:55%;border-radius:10px;background:linear-gradient(90deg,rgba(14,165,233,.6),rgba(168,85,247,.6))}
+.web-preview .w-block{height:28%;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.06)}
+.work-body{padding:1rem}
+.work-body h3{margin-bottom:.35rem}
+    .carousel-controls{display:flex;gap:.6rem;justify-content:flex-end;margin-top:.4rem}
+    .icon-btn{width:42px;height:42px;border-radius:12px;border:1px solid rgba(168,85,247,0.18);background:rgba(26,21,38,0.5);color:#fff;cursor:pointer;transition:all 0.3s cubic-bezier(0.22, 1, 0.36, 1)}
+    .icon-btn:hover{border-color:rgba(56,189,248,.45);box-shadow:0 0 16px rgba(168,85,247,.15);transform:translateY(-2px)}
+    .instagram-invite{display:grid;gap:1rem;justify-items:center;text-align:center;max-width:680px;margin:0 auto}
+    .instagram-invite p{max-width:58ch;margin:0 auto}
+    .motion-grid{display:grid;gap:1.6rem;align-items:center}
+    .motion-copy p{max-width:60ch}
+    .motion-points{display:grid;gap:.7rem;margin-top:1.2rem;padding:0;list-style:none}
+    .motion-points li{display:flex;gap:.6rem;align-items:flex-start;color:#D4D4D8}
+    .motion-points li::before{content:"";width:8px;height:8px;border-radius:50%;margin-top:.45rem;flex:0 0 auto;background:linear-gradient(135deg,#00F0FF,#A855F7);box-shadow:0 0 10px rgba(168,85,247,.35)}
+    .motion-frame{position:relative;border-radius:24px;overflow:hidden;border:1px solid rgba(168,85,247,0.2);background:rgba(26,21,38,0.55);box-shadow:0 20px 50px rgba(0,0,0,.28)}
+    .motion-frame::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.04);border-radius:24px;pointer-events:none}
+    .motion-video{width:100%;height:auto;display:block;background:#0B0910}
+    .motion-desktop{display:none}
+    .motion-mobile{display:block}
+
+/* Plans */
+.full360{position:relative;overflow:hidden;border-radius:24px;padding:1.4rem;margin-bottom:1.4rem;background:linear-gradient(135deg,#1E1633 0%,#120E1D 100%);border:1px solid rgba(168,85,247,0.35);display:grid;gap:1rem}
+.full360::after{content:"";position:absolute;top:-20%;right:-10%;width:320px;height:320px;background:radial-gradient(circle, rgba(168,85,247,0.22), transparent 65%);filter:blur(10px);pointer-events:none}
+.full360 > *{position:relative;z-index:1}
+.full360-grid{display:grid;gap:1.2rem;align-items:center}
+.full360 .tag{display:inline-flex;align-items:center;padding:.35rem .65rem;border-radius:999px;font-size:.75rem;letter-spacing:.08em;color:#F3E8FF;background:rgba(168,85,247,.18);border:1px solid rgba(168,85,247,.35);margin-bottom:.6rem}
+.full360 p{max-width:62ch;color:#D4D4D8}
+.full360 .deliverables{display:flex;flex-wrap:wrap;gap:.45rem;margin:.2rem 0 0;padding:0;list-style:none}
+.full360 .deliverables li{font-size:.8rem;color:#EDE9FE;padding:.32rem .6rem;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(168,85,247,0.22)}
+.full360-side{display:grid;gap:.6rem;justify-items:start}
+.consult-row{display:inline-flex;align-items:center;gap:.5rem;color:#E4E4E7;font-weight:400}
+.lock-icon{width:18px;height:18px;flex:0 0 auto}
+.packages-6{display:grid;grid-template-columns:1fr;gap:1.1rem}
+.package{background:rgba(26,21,38,0.75);border:1px solid rgba(168,85,247,0.18);border-radius:20px;padding:1.25rem;transition:all 0.3s cubic-bezier(0.22,1,0.36,1)}
+.package:hover{transform:translateY(-3px);border-color:rgba(168,85,247,.32);box-shadow:0 14px 30px rgba(0,0,0,.22)}
+.package h3{margin-bottom:.3rem}
+.price-blur-wrap{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .8rem}
+.price-blur{font-family:"Lexend",system-ui,sans-serif;font-weight:400;font-size:1.05rem;color:#fff;filter:blur(6px);user-select:none}
+.price-consult{font-size:.85rem;color:#D8B4FE}
+.package ul{margin:0 0 1.1rem;padding:0;list-style:none;display:grid;gap:.45rem;color:#D4D4D8}
+.package li{display:flex;gap:.5rem;align-items:flex-start}
+.package li svg{width:18px;height:18px;flex:0 0 auto;stroke:#00F0FF;fill:none;stroke-width:1.8;margin-top:.1rem}
+.package .btn{width:100%}
+.custom-form{display:grid;gap:.7rem;margin-top:.4rem}
+.custom-form input,.custom-form textarea{
+  width:100%;padding:.85rem .9rem;border-radius:12px;border:1px solid rgba(168,85,247,0.22);
+  background:#0B0910;color:#fff;font:inherit;transition:border-color 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s cubic-bezier(0.22,1,0.36,1)
+}
+.custom-form textarea{min-height:110px;resize:vertical}
+.custom-form input::placeholder,.custom-form textarea::placeholder{color:#7c7f8a}
+.custom-form input:focus,.custom-form textarea:focus{outline:none;border-color:rgba(168,85,247,.5);box-shadow:0 0 0 3px rgba(168,85,247,.12)}
+
+/* Final CTA */
+.final-cta{padding:5rem 0}
+.cta-box{position:relative;overflow:hidden;border-radius:28px;padding:2rem 1.4rem;background:rgba(26,21,38,0.55);border:1px solid rgba(168,85,247,0.18);text-align:center;backdrop-filter:blur(10px)}
+.cta-box::before{content:"";position:absolute;left:8%;right:8%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(14,165,233,.7),rgba(168,85,247,.7),transparent);box-shadow:0 0 18px rgba(168,85,247,.2)}
+.cta-box::after{content:"";position:absolute;inset:auto -10% -40% -10%;height:220px;background:radial-gradient(circle,rgba(124,58,237,.18),transparent 60%);filter:blur(20px)}
+.cta-box > *{position:relative;z-index:1}
+.cta-box p{max-width:60ch;margin:0 auto 1.4rem}
+
+.footer-main{display:grid;gap:2rem;margin-bottom:2rem}
+.footer-logo{height:42px;width:auto;display:block;margin-bottom:1rem;transition:transform .35s cubic-bezier(0.22,1,0.36,1),filter .35s cubic-bezier(0.22,1,0.36,1)}
+    .footer-brand .brand:hover .footer-logo,.footer-brand .brand:focus-visible .footer-logo{transform:translateY(-1px) scale(1.015);filter:drop-shadow(0 0 12px rgba(168,85,247,.18))}
+    @media (prefers-reduced-motion: reduce){.footer-logo{transition:none !important}.footer-brand .brand:hover .footer-logo,.footer-brand .brand:focus-visible .footer-logo{transform:none;filter:none}}
+.footer-brand p{margin:0;color:#A1A1AA;max-width:38ch;font-size:.95rem}
+.footer-social{display:flex;align-items:center;gap:.6rem;margin-top:1rem}
+.social-link{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;border:1px solid rgba(168,85,247,0.2);background:rgba(255,255,255,0.03);color:#A1A1AA;transition:all 0.3s cubic-bezier(0.22,1,0.36,1)}
+.social-link:hover{color:#fff;border-color:rgba(168,85,247,0.45);transform:translateY(-2px);box-shadow:0 8px 20px rgba(124,58,237,0.18)}
+.social-link svg{width:18px;height:18px;display:block}
+.footer-col h4{margin:0 0 .8rem;font-size:.95rem;color:#A1A1AA;font-weight:400}
+.footer-list{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.footer-list a,.footer-link-btn{color:#A1A1AA;font-size:.95rem;transition:color 0.3s var(--ease);background:none;border:none;padding:0;cursor:pointer;text-align:left;font:inherit}
+.footer-list a:hover,.footer-link-btn:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:1.25rem;display:grid;gap:.7rem;font-size:12px;line-height:1.6;color:#71717A}
+.footer-bottom p{margin:0;color:#71717A}
+.footer-bottom strong{font-weight:400;color:#A1A1AA}
+
+/* Modals */
+.modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.35s cubic-bezier(0.22,1,0.36,1), visibility 0.35s cubic-bezier(0.22,1,0.36,1)}
+.modal.is-open{opacity:1;visibility:visible;pointer-events:auto}
+.modal-overlay{position:absolute;inset:0;background:rgba(7,7,10,0.72);backdrop-filter:blur(6px)}
+.modal-dialog{position:relative;width:min(680px,100%);max-height:85vh;overflow:auto;background:#14101D;border:1px solid rgba(168,85,247,0.2);border-radius:20px;padding:1.5rem 1.4rem;box-shadow:0 24px 60px rgba(0,0,0,.45);transform:translateY(10px) scale(.98);transition:transform 0.35s cubic-bezier(0.22,1,0.36,1)}
+.modal.is-open .modal-dialog{transform:translateY(0) scale(1)}
+.modal-dialog h3{margin:0 2rem 1rem 0;font-size:1.25rem}
+.modal-dialog h4{margin:1.1rem 0 .4rem;font-size:1rem;color:#E4E4E7;font-weight:400}
+.modal-dialog p{color:#A1A1AA;margin:0 0 .85rem;font-size:.95rem;line-height:1.7}
+.modal-dialog ul{margin:0 0 .9rem 1.1rem;padding:0;color:#A1A1AA;font-size:.95rem;line-height:1.7}
+.modal-dialog li{margin:0 0 .35rem}
+.modal-close{position:absolute;top:.8rem;right:.8rem;width:36px;height:36px;border-radius:10px;border:1px solid rgba(168,85,247,0.2);background:rgba(255,255,255,.04);color:#fff;font-size:1.3rem;line-height:1;cursor:pointer;transition:all 0.3s var(--ease)}
+.modal-close:hover{border-color:rgba(168,85,247,.4);transform:translateY(-1px)}
+body.modal-open{overflow:hidden}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(0.22, 1, 0.36, 1), transform .7s cubic-bezier(0.22, 1, 0.36, 1)}
+.reveal.in-view{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+  .reveal{opacity:1;transform:none}
+  .mobile-panel{transition:none}
+}
+
+    @media (min-width: 720px){
+      .section{padding:6rem 0}
+      .hero{padding:calc(80px + 16px) 0 4rem}
+      .nav-links{display:flex}
+      .menu-toggle{display:none}
+      .mobile-panel{display:none !important}
+      .hero-grid{grid-template-columns:1.05fr .95fr;gap:2.5rem}
+      .instagram-invite{gap:1.2rem}
+      .motion-grid{grid-template-columns:1fr 1.15fr;gap:2.2rem}
+      .motion-desktop{display:block}
+      .motion-mobile{display:none}
+  .bento-floor-1{grid-template-columns:repeat(2,1fr)}
+  .bento-pilar{min-height:220px}
+  .bento{grid-template-columns:repeat(6,1fr)}
+  .bento .span-3{grid-column:span 3}
+  .bento .span-2{grid-column:span 2}
+  .bento .span-4{grid-column:span 4}
+  .carousel{grid-auto-columns:calc(33.333% - .7rem)}
+  .packages{grid-template-columns:repeat(3,1fr)}
+  .footer-main{grid-template-columns:1.2fr 1fr 1fr;gap:2.5rem}
+  .cta-box{padding:3rem 2rem}
+  .final-cta{padding:6rem 0}
+  .packages-6{grid-template-columns:repeat(3,1fr)}
+  .full360{padding:1.8rem}
+  .full360-grid{grid-template-columns:1.4fr .8fr}
+  .full360-side{justify-items:end;text-align:right}
+}
+@media (min-width: 1024px){
+  .hero-visual{min-height:420px}
+  .showcase-inner{min-height:380px}
+  .ecosystem-grid{grid-template-columns:40% 1fr;gap:2.5rem}
+  .eco-sticky{position:sticky;top:110px;align-self:start}
+  .bento-eco{grid-template-columns:repeat(2,1fr)}
+  .eco-card.span-full{grid-column:1 / -1}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="grad-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"></stop>
+      <stop offset="100%" stop-color="#A855F7"></stop>
+    </linearGradient>
+  </defs>
+</svg>
+<header class="site-header" id="siteHeader">
+  <div class="container nav">
+    <a href="#topo" class="brand" aria-label="Vian, início">
+      <img class="brand-logo-full" src="/api/projects/aadbd483-889d-46bc-b1c8-2a35aa9200ee/raw/vian-logo-completa.png?workspaceId=bdzku615sc9tr3tt3m5151el&amp;workspaceMemberId=jm7nz961yf4wvbsvxjvjr6bv" alt="Vian">
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#beneficios">Benefícios</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#planos">Planos</a>
+      <a href="#portfolio">Portfólio</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-header" href="https://wa.me/5562993075352" target="_blank" rel="noopener">
+        <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.86 11.86 0 0 0 5.76 1.47h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.44ZM12.07 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.38a9.85 9.85 0 0 1-1.52-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.89-9.9 9.89Zm5.43-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"></path></svg></span>
+        <span>WhatsApp</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+  <div class="container mobile-panel" id="mobilePanel">
+    <a href="#beneficios">Benefícios</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#planos">Planos</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#contato">Contato</a>
+  </div>
+</header>
+
+<main id="topo">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Agência digital de performance</span>
+        <h1>Marca forte, conteúdo que converte e operação digital sem ruído.</h1>
+        <p class="lead">A Vian une estratégia, criação e tecnologia para transformar presença digital em crescimento real — com Social Media, vídeos e landing pages trabalhando no mesmo ritmo.</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/5562993075352?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20Vian%20sobre%20um%20projeto." target="_blank" rel="noopener">
+            <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.86 11.86 0 0 0 5.76 1.47h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.44ZM12.07 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.38a9.85 9.85 0 0 1-1.52-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.89-9.9 9.89Zm5.43-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"></path></svg></span>
+            <span>Falar no WhatsApp</span>
+          </a>
+          <a class="btn" href="#portfolio">
+            <span>Ver trabalhos</span>
+            <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+          </a>
+        </div>
+        <div class="hero-points" aria-label="Diferenciais rápidos">
+          <span><i class="dot"></i> Planejamento orientado a conversão</span>
+          <span><i class="dot"></i> Entregas consistentes e alinhadas à marca</span>
+          <span><i class="dot"></i> Processos e fluxos para ganhar escala</span>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="motion-frame">
+            <video class="motion-video motion-desktop" autoplay muted loop playsinline preload="metadata" aria-label="Motion de apresentação da Vian versão desktop">
+            <source src="vian-motion-desktop.mp4" type="video/mp4">
+          </video>
+            <video class="motion-video motion-mobile" autoplay muted loop playsinline preload="metadata" aria-label="Motion de apresentação da Vian versão mobile">
+            <source src="vian-motion-mobile.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios" class="section section-bg-beneficios">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Diferenciais</span>
+        <h2>Clareza estratégica, presença consistente e foco em conversão.</h2>
+        <p>Os pilares que sustentam posicionamento, execução e confiança em cada entrega.</p>
+      </div>
+
+      <div class="bento-floor bento-floor-1">
+        <article class="bento-card bento-pilar reveal">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 3h12l3 6-9 12L3 9l3-6z"></path><path d="M3 9h18"></path><path d="M12 21L8 9l4-6 4 6-4 12z"></path></svg></div>
+          <h3>Posicionamento que valoriza sua marca</h3>
+          <p>Identidade, narrativa e comunicação alinhadas para fortalecer sua presença com clareza e autoridade.</p>
+        </article>
+        <article class="bento-card bento-pilar reveal">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4l7 17 2-7 7-2L4 4z"></path><path d="M13 13l6 6"></path></svg></div>
+          <h3>Conteúdo e páginas que convertem</h3>
+          <p>Do criativo à landing page, cada entrega é pensada para guiar seu público à ação certa.</p>
+        </article>
+        <article class="bento-card bento-pilar reveal">
+          <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .3 1.7 1.7 0 0 0-.82 1.46V21a2 2 0 0 1-4 0v-.09a1.7 1.7 0 0 0-.67-1.31 1.7 1.7 0 0 0-1-.3 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.3-1 1.7 1.7 0 0 0-1.46-.82H2.8a2 2 0 0 1 0-4h.09a1.7 1.7 0 0 0 1.31-.67 1.7 1.7 0 0 0 .3-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.3 1.7 1.7 0 0 0 .82-1.46V2.8a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 .67 1.31 1.7 1.7 0 0 0 1 .3 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 .3 1 1.7 1.7 0 0 0 1.46.82h.09a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.31.67 1.7 1.7 0 0 0-.3 1z"></path></svg></div>
+          <h3>Processos que sustentam sua escala</h3>
+          <p>Fluxos e processos bem definidos para dar agilidade à operação e apoiar o crescimento.</p>
+        </article>
+        <article class="bento-card bento-pilar reveal">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+          <h3>Parceria próxima e execução consistente</h3>
+          <p>Acompanhamento contínuo, ajustes ágeis e entregas com padrão alto em todas as frentes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="section section-bg-servicos">
+    <div class="container">
+      <div class="ecosystem-grid">
+        <div class="eco-sticky reveal">
+          <span class="badge-pill">ECOSSISTEMA VIAN</span>
+          <h2>Tudo o que sua operação digital precisa para escalar em um só lugar</h2>
+          <p>Unimos estratégia, design, audiovisual e páginas de conversão em um fluxo integrado — para sua marca crescer com consistência, agilidade e sem burocracia.</p>
+          <a class="btn" href="https://wa.me/5562993075352?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20da%20Vian." target="_blank" rel="noopener">
+            <span>Falar com um especialista</span>
+            <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+          </a>
+        </div>
+        <div class="bento-eco">
+          <article class="eco-card span-full reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"></path><path d="M8 10h8M8 14h5"></path><circle cx="17" cy="14" r="1.2"></circle></svg></div>
+            <h3>Social Media &amp; Estratégia</h3>
+            <p>Planejamento editorial, roteiros de retenção, direção criativa e gestão de posicionamento para fortalecer sua presença com consistência.</p>
+            <ul class="tags">
+              <li>Calendário Mensal</li>
+              <li>Roteiros &amp; Copy</li>
+              <li>Direção Visual</li>
+            </ul>
+          </article>
+          <article class="eco-card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.8 7.1 18.2 8 12.7 4 8.8 9.5 8z"></path></svg></div>
+            <h3>Design &amp; Identidade</h3>
+            <p>Peças de alto padrão visual para feed, stories, carrosséis e criativos de anúncios que elevam a percepção da sua marca.</p>
+            <ul class="tags">
+              <li>Posts &amp; Carrosséis</li>
+              <li>Criativos Ads</li>
+              <li>Identidade</li>
+            </ul>
+          </article>
+          <article class="eco-card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2"></rect><path d="M10 9l5 3-5 3z"></path><path d="M17 8l4-2v12l-4-2"></path></svg></div>
+            <h3>Audiovisual, Reels &amp; Motion</h3>
+            <p>Edição dinâmica com cortes de retenção, legendas animadas e motion graphics para vídeos curtos que prendem atenção.</p>
+            <ul class="tags">
+              <li>Edição Reels</li>
+              <li>Motion Graphics</li>
+              <li>Vídeos Ads</li>
+            </ul>
+          </article>
+          <article class="eco-card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path><path d="M7 13h5M7 16h3"></path></svg></div>
+            <h3>Sites &amp; Landing Pages</h3>
+            <p>Páginas ultra-rápidas, responsivas e focadas em conversão direta no WhatsApp para transformar visitas em contatos.</p>
+            <ul class="tags">
+              <li>Landing Pages</li>
+              <li>Sites Institucionais</li>
+              <li>Alta Velocidade</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="planos" class="section section-bg-planos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">PACOTES &amp; FORMATOS</span>
+        <h2>Escolha o formato ideal para o momento da sua marca</h2>
+        <p>Planos flexíveis ou demandas sob medida. Clique para revelar condições direto no WhatsApp.</p>
+      </div>
+
+      <div class="full360 reveal">
+        <div class="full360-grid">
+          <div>
+            <span class="tag">OPERAÇÃO COMPLETA</span>
+            <h3>Vian Full Digital</h3>
+            <p>Tenha conteúdo, edição/motion e páginas rodando juntos em uma operação integrada — com estratégia, execução e otimização no mesmo fluxo.</p>
+            <ul class="deliverables">
+              <li>Social Media</li>
+              <li>Motion &amp; Reels</li>
+              <li>Landing Pages</li>
+              <li>Performance</li>
+            </ul>
+          </div>
+          <div class="full360-side">
+            <div class="consult-row">
+              <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+              <span>Valor sob consulta</span>
+            </div>
+            <a class="btn" href="https://wa.me/5562993075352?text=Ol%C3%A1%2C%20quero%20consultar%20o%20Vian%20Full%20Digital." target="_blank" rel="noopener">
+              <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.86 11.86 0 0 0 5.76 1.47h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.44ZM12.07 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.38a9.85 9.85 0 0 1-1.52-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.89-9.9 9.89Zm5.43-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"></path></svg></span>
+              <span>Consultar no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="packages-6">
+        <article class="package reveal">
+          <h3>Vian Social</h3>
+          <div class="price-blur-wrap">
+            <span class="price-blur" aria-hidden="true">R$ 0.000,00 /mês</span>
+            <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="#D8B4FE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+            <span class="price-consult">Valor sob consulta</span>
+          </div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Calendário estratégico de conteúdos</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Briefings, roteiros e diretrizes visuais</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Planejamento orientado a posicionamento</span></li>
+          </ul>
+          <a class="btn" href="https://wa.me/5562993075352?text=Ol%C3%A1%2C%20quero%20revelar%20o%20valor%20do%20plano%20Vian%20Social." target="_blank" rel="noopener">
+            <span>Revelar valor</span>
+            <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+          </a>
+        </article>
+
+        <article class="package reveal">
+          <h3>Vian Social +</h3>
+          <div class="price-blur-wrap">
+            <span class="price-blur" aria-hidden="true">R$ 0.000,00 /mês</span>
+            <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="#D8B4FE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+            <span class="price-consult">Valor sob consulta</span>
+          </div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Tudo do plano Social</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Produção completa de design e artes</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Peças para feed e stories com consistência</span></li>
+          </ul>
+          <a class="btn" href="https://wa.me/5562993075352?text=Ol%C3%A1%2C%20quero%20revelar%20o%20valor%20do%20plano%20Vian%20Social%20%2B." target="_blank" rel="noopener">
+            <span>Revelar valor</span>
+            <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+          </a>
+        </article>
+
+        <article class="package reveal">
+          <h3>Vian Web &amp; Dev</h3>
+          <div class="price-blur-wrap">
+            <span class="price-blur" aria-hidden="true">R$ 0.000,00 /mês</span>
+            <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="#D8B4FE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+            <span class="price-consult">Valor sob consulta</span>
+          </div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Criação de sites institucionais rápidos</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Landing pages de conversão</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Design responsivo e foco em performance</span></li>
+          </ul>
+          <a class="btn" href="https://wa.me/5562993075352?text=Ol%C3%A1%2C%20quero%20revelar%20o%20valor%20do%20plano%20Vian%20Web%20%26%20Dev." target="_blank" rel="noopener">
+            <span>Revelar valor</span>
+            <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+          </a>
+        </article>
+
+        <article class="package reveal">
+          <h3>Vian Criativos &amp; Ads</h3>
+          <div class="price-blur-wrap">
+            <span class="price-blur" aria-hidden="true">R$ 0.000,00 /mês</span>
+            <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="#D8B4FE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+            <span class="price-consult">Valor sob consulta</span>
+          </div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Pacotes de criativos estáticos e animados (motion)</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Peças focadas em tráfego pago</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Variações para testes e campanhas</span></li>
+          </ul>
+          <a class="btn" href="https://wa.me/5562993075352?text=Ol%C3%A1%2C%20quero%20revelar%20o%20valor%20do%20plano%20Vian%20Criativos%20%26%20Ads." target="_blank" rel="noopener">
+            <span>Revelar valor</span>
+            <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+          </a>
+        </article>
+
+        <article class="package reveal">
+          <h3>Vian Motion &amp; Reels</h3>
+          <div class="price-blur-wrap">
+            <span class="price-blur" aria-hidden="true">R$ 0.000,00 /mês</span>
+            <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="#D8B4FE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+            <span class="price-consult">Valor sob consulta</span>
+          </div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Roteirização de vídeos curtos</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Edição dinâmica com retenção e motion graphics</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"></path></svg><span>Formatos otimizados para reels e anúncios</span></li>
+          </ul>
+          <a class="btn" href="https://wa.me/5562993075352?text=Ol%C3%A1%2C%20quero%20revelar%20o%20valor%20do%20plano%20Vian%20Motion%20%26%20Reels." target="_blank" rel="noopener">
+            <span>Revelar valor</span>
+            <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+          </a>
+        </article>
+
+        <article class="package reveal">
+          <h3>Pacote Personalizado</h3>
+          <p style="margin-bottom:.8rem;color:#D4D4D8">Precisa combinar serviços específicos Monte sua demanda sob medida.</p>
+          <form class="custom-form" id="customPackageForm">
+            <input type="text" id="customName" name="nome" placeholder="Seu nome" autocomplete="name">
+            <textarea id="customNeed" name="necessidade" placeholder="O que você precisa (Ex: 8 reels editados por mês + 1 landing page...)"></textarea>
+            <button type="submit" class="btn">
+              <span>Enviar pelo WhatsApp</span>
+              <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+            </button>
+          </form>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="portfolio" class="section section-bg-portfolio">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Portfólio e prova visual</span>
+        <h2>Entregas reais pensadas para destacar sua marca.</h2>
+        <p>Uma vitrine de formatos criativos e digitais — pronta para receber conteúdos reais e evoluir com novos cases.</p>
+      </div>
+      <div class="carousel-wrap reveal">
+        <div class="carousel" id="portfolioCarousel" aria-label="Carrossel de portfólio">
+          <article class="work">
+            <div class="work-media media-feed">
+              <span class="media-badge">Carrosséis &amp; Posts</span>
+              <div class="media-frame">
+                <div class="media-content feed-collage" aria-hidden="true">
+                  <div class="f1"></div><div></div><div></div>
+                </div>
+                <div class="media-placeholder"><span>Espaço para imagem/carrossel real</span></div>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Campanhas e identidade de feed</h3>
+              <p class="muted">Composições visuais consistentes e direcionadas para fortalecer o posicionamento e o reconhecimento da sua marca.</p>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work-media media-reels">
+              <span class="media-badge">Edição &amp; Retenção</span>
+              <div class="media-frame">
+                <div class="media-content reels-visual" aria-hidden="true">
+                  <div class="reels-bars"><span></span><span></span><span></span></div>
+                </div>
+                <span class="media-indicator" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10-6.5-10-6.5Z"></path></svg>
+                </span>
+                <div class="media-placeholder"><span>Espaço para vídeo/GIF em loop</span></div>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Reels e peças audiovisuais</h3>
+              <p class="muted">Edições focadas em retenção, legendas dinâmicas e ritmo acelerado para prender a atenção do público.</p>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work-media media-web">
+              <span class="media-badge">Alta Performance</span>
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="browser-screen">
+                <div class="media-content web-preview" aria-hidden="true">
+                  <div class="w-hero"></div>
+                  <div class="w-line"></div>
+                  <div class="w-line short"></div>
+                  <div class="w-cta"></div>
+                  <div class="w-block"></div>
+                </div>
+                <div class="media-placeholder"><span>Espaço para print de landing page</span></div>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Páginas focadas em captação</h3>
+              <p class="muted">Estruturas limpas, ultra-rápidas e responsivas desenhadas para transformar visitantes em leads no WhatsApp.</p>
+            </div>
+          </article>
+        </div>
+        <div class="carousel-controls">
+          <button class="icon-btn" type="button" id="prevWork" aria-label="Item anterior">‹</button>
+          <button class="icon-btn" type="button" id="nextWork" aria-label="Próximo item">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="instagram" class="section section-bg-instagram">
+    <div class="container">
+      <div class="instagram-invite reveal">
+        <span class="eyebrow">Instagram</span>
+        <h2>Acompanhe a Vian de perto.</h2>
+          <p>Conteúdos, bastidores e referências visuais para você conhecer de perto como a Vian posiciona marcas no digital. Siga no Instagram <a href="https://www.instagram.com/vian.ae?igsh=MWR3cmZ0MjdqbmJyZg==" target="_blank" rel="noopener" style="color:#D8B4FE">@vian.ae</a>.</p>
+        <a class="btn" href="https://www.instagram.com/vian.ae?igsh=MWR3cmZ0MjdqbmJyZg==" target="_blank" rel="noopener" aria-label="Conhecer a Vian no Instagram">
+          <span>Conhecer a Vian no Instagram</span>
+          <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="crescimento-vian" class="section section-bg-motion">
+    <div class="container">
+      <div class="motion-grid">
+        <div class="motion-copy reveal">
+          <span class="eyebrow">Crescimento em movimento</span>
+          <h2>Resultados que ganham ritmo com a Vian.</h2>
+            <p>Uma visão clara do crescimento que buscamos construir: estratégia, execução e otimização trabalhando juntas para impulsionar sua marca.</p>
+          <ul class="motion-points" aria-label="Destaques de crescimento">
+              <li>Planejamento orientado ? conversão.</li>
+              <li>Entregas consistentes e alinhadas à marca.</li>
+            <li>Processos e fluxos para ganhar escala.</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <div class="showcase">
+            <div class="showcase-inner">
+                <div class="mock-top"><span>Vian · Painel de crescimento</span><div class="pills"><i></i><i></i><i></i></div></div>
+              <div class="mock-metrics">
+                <div class="metric"><strong>+38%</strong><span>Alcance qualificado</span></div>
+                  <div class="metric"><strong>2,4x</strong><span>Engajamento em vídeo</span></div>
+                  <div class="metric"><strong>+27%</strong><span>Leads por página</span></div>
+              </div>
+              <div class="mock-chart">
+                <div class="chart-growth" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 17L10 12L13 15L19 8"></path>
+                    <path d="M14 8h5v5"></path>
+                  </svg>
+                </div>
+                <svg viewBox="0 0 400 120" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="lineg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#38BDF8"></stop><stop offset="1" stop-color="#A855F7"></stop></linearGradient>
+                    <linearGradient id="areag" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(56,189,248,0.22)"></stop><stop offset="100%" stop-color="rgba(168,85,247,0.02)"></stop></linearGradient>
+                    <filter id="dot-glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+                      <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+                    </filter>
+                    <path id="chart-line-path" d="M0,95 C40,80 70,88 110,62 C150,36 180,48 220,40 C260,32 290,20 330,26 C360,30 380,18 400,12"></path>
+                  </defs>
+                  <g class="chart-grid" stroke="rgba(255,255,255,0.08)" stroke-width="1">
+                    <path d="M0,30 L400,30"></path><path d="M0,60 L400,60"></path><path d="M0,90 L400,90"></path>
+                  </g>
+                  <g class="chart-plot">
+                    <path d="M0,95 C40,80 70,88 110,62 C150,36 180,48 220,40 C260,32 290,20 330,26 C360,30 380,18 400,12 L400,120 L0,120 Z" fill="url(#areag)"></path>
+                    <path d="M0,95 C40,80 70,88 110,62 C150,36 180,48 220,40 C260,32 290,20 330,26 C360,30 380,18 400,12" fill="none" stroke="url(#lineg)" stroke-width="3" stroke-linecap="round"></path>
+                    <circle class="chart-dot" r="4" fill="#CFFAFE" filter="url(#dot-glow)">
+                      <animateMotion dur="4.5s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear">
+                        <mpath href="#chart-line-path"></mpath>
+                      </animateMotion>
+                    </circle>
+                    <circle class="chart-dot-core" r="2.2" fill="#FFFFFF">
+                      <animateMotion dur="4.5s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear">
+                        <mpath href="#chart-line-path"></mpath>
+                      </animateMotion>
+                    </circle>
+                  </g>
+                </svg>
+              </div>
+              <div class="mock-list">
+                <div class="mock-row"><span>Campanha Social + Reels</span><span class="badge">Em alta</span></div>
+                  <div class="mock-row"><span>Landing Page de captação</span><span class="badge">Otimizando</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section section-bg-final final-cta">
+    <div class="container">
+      <div class="cta-box reveal">
+        <span class="eyebrow" style="justify-content:center">Pronto para evoluir sua marca</span>
+        <h2>Vamos construir uma presença digital à altura do seu negócio.</h2>
+        <p>Conte à Vian o que você precisa e receba um direcionamento claro para transformar estratégia, conteúdo e tecnologia em resultados.</p>
+        <a class="btn" href="https://wa.me/5562993075352?text=Ol%C3%A1%2C%20quero%20conversar%20com%20a%20Vian%20sobre%20um%20projeto." target="_blank" rel="noopener">
+          <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.86 11.86 0 0 0 5.76 1.47h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.44ZM12.07 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.38a9.85 9.85 0 0 1-1.52-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.89-9.9 9.89Zm5.43-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"></path></svg></span>
+          <span>Falar com a Vian no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-col footer-brand">
+        <a href="#topo" class="brand" aria-label="Vian, início">
+          <img class="footer-logo" src="/api/projects/aadbd483-889d-46bc-b1c8-2a35aa9200ee/raw/vian-logo-completa.png?workspaceId=bdzku615sc9tr3tt3m5151el&amp;workspaceMemberId=jm7nz961yf4wvbsvxjvjr6bv" alt="Vian">
+        </a>
+        <p>Soluções digitais de alta performance em social media, audiovisual e páginas de conversão.</p>
+        <div class="footer-social" aria-label="Redes sociais da Vian">
+          <a class="social-link" href="https://wa.me/5562993075352" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.86 11.86 0 0 0 5.76 1.47h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.44ZM12.07 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.38a9.85 9.85 0 0 1-1.52-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.89-9.9 9.89Zm5.43-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"></path></svg>
+          </a>
+          <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="Instagram (link provisório)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle></svg>
+          </a>
+          <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="LinkedIn (link provisório)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.3 6.94 1.97 1.97 0 0 0 5.25 3ZM20.44 13.02c0-3.18-1.7-4.66-3.96-4.66-1.83 0-2.65 1.01-3.1 1.72V8.5H10c.04 1.03 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.69.13-.93.28-.69.9-1.4 1.95-1.4 1.38 0 1.93 1.05 1.93 2.59V20H20.8c-.05 0-.36-6.47-.36-6.98Z"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação rápida</h4>
+        <ul class="footer-list">
+          <li><a href="#servicos">Ecossistema</a></li>
+          <li><a href="#planos">Pacotes</a></li>
+          <li><a href="#beneficios">Como Trabalhamos</a></li>
+          <li><a href="https://wa.me/5562993075352" target="_blank" rel="noopener">Contato WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Políticas e legal</h4>
+        <ul class="footer-list">
+          <li><button type="button" class="footer-link-btn" data-modal-open="modal-privacidade">Política de Privacidade (LGPD)</button></li>
+          <li><button type="button" class="footer-link-btn" data-modal-open="modal-termos">Termos de Uso e Prestação de Serviços</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><strong>© 2026 Vian. Todos os direitos reservados.</strong></p>
+      <p><strong>Aviso de Propriedade Intelectual e Direitos Autorais:</strong> Todo o conteúdo deste site, incluindo identidade visual, logotipos, layouts, códigos-fonte, textos, designs, animações, metodologias e materiais gráficos, é de propriedade exclusiva da Vian e protegido pela Lei de Direitos Autorais (Lei nº 9.610/98) e pela Lei de Propriedade Industrial (Lei nº 9.279/96). É expressamente proibida a reprodução, cópia, distribuição, modificação ou uso comercial, total ou parcial, sem autorização prévia e por escrito.</p>
+      <p><strong>Aviso de Privacidade (LGPD):</strong> Os dados enviados através dos formulários e canais de contato desta página são tratados em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), exclusivamente para fins de atendimento comercial e elaboração de propostas, conforme detalhado na Política de Privacidade.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="modal-privacidade" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-privacidade-title">
+  <div class="modal-overlay" data-modal-close=""></div>
+  <div class="modal-dialog">
+    <button type="button" class="modal-close" data-modal-close="" aria-label="Fechar">×</button>
+    <h3 id="modal-privacidade-title">Política de Privacidade (LGPD)</h3>
+    <p>Esta Política descreve, de forma objetiva, como a Vian trata dados pessoais compartilhados por meio deste site e de seus canais de contato, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+    <h4>1. Dados coletados</h4>
+    <p>Podemos tratar os dados que você informa voluntariamente, como:</p>
+    <ul>
+      <li>Nome, telefone/WhatsApp e informações enviadas em formulários ou mensagens;</li>
+      <li>Detalhes sobre sua necessidade, projeto ou interesse comercial;</li>
+      <li>Dados técnicos básicos de navegação necessários ao funcionamento e à segurança do site, quando aplicável.</li>
+    </ul>
+    <h4>2. Finalidades e base de tratamento</h4>
+    <p>Os dados são utilizados para atendimento, retorno de contato, entendimento de demanda, elaboração de propostas e comunicação relacionada aos serviços da Vian, com base no legítimo interesse e/ou em procedimentos preliminares a pedido do titular.</p>
+    <h4>3. Compartilhamento e armazenamento</h4>
+    <p>A Vian não comercializa dados pessoais. As informações podem ser tratadas por meio de ferramentas e canais utilizados no atendimento (como WhatsApp e serviços de hospedagem/comunicação), apenas na medida necessária para as finalidades descritas, adotando-se medidas razoáveis de segurança e confidencialidade.</p>
+    <h4>4. Direitos do titular</h4>
+    <p>Nos termos da LGPD, você pode solicitar confirmação de tratamento, acesso, correção, eliminação de dados desnecessários, informação sobre compartilhamento e demais direitos aplicáveis, observadas as hipóteses legais.</p>
+    <h4>5. Contato e atualizações</h4>
+    <p>Para dúvidas, solicitações ou esclarecimentos sobre privacidade e proteção de dados, entre em contato pelos canais oficiais disponibilizados neste site. Esta política pode ser atualizada para refletir melhorias ou ajustes operacionais, mantendo seu propósito informativo.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-termos" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-termos-title">
+  <div class="modal-overlay" data-modal-close=""></div>
+  <div class="modal-dialog">
+    <button type="button" class="modal-close" data-modal-close="" aria-label="Fechar">×</button>
+    <h3 id="modal-termos-title">Termos de Uso e Prestação de Serviços</h3>
+    <p>Ao acessar este site e utilizar seus canais de contato, você concorda com os termos abaixo, que têm caráter informativo e comercial.</p>
+    <h4>1. Natureza do conteúdo e das propostas</h4>
+    <p>As informações apresentadas descrevem serviços, formatos e possibilidades de atuação da Vian. O envio de mensagens, formulários ou solicitações não constitui contratação automática, vínculo imediato ou garantia de resultado.</p>
+    <p>Qualquer prestação de serviços depende de análise prévia, alinhamento de escopo, prazos, condições comerciais e confirmação formal entre as partes.</p>
+    <h4>2. Propriedade intelectual</h4>
+    <p>Todo o conteúdo deste site — incluindo identidade visual, logotipos, layouts, códigos-fonte, textos, designs, animações, metodologias e materiais gráficos — é de propriedade exclusiva da Vian, protegido pela Lei de Direitos Autorais (Lei nº 9.610/98) e pela Lei de Propriedade Industrial (Lei nº 9.279/96). É vedada a reprodução, cópia, distribuição, modificação ou uso comercial, total ou parcial, sem autorização prévia e por escrito.</p>
+    <h4>3. Uso adequado e responsabilidades</h4>
+    <p>Você se compromete a utilizar este site de forma lícita, sem tentar acessar áreas restritas, interferir em seu funcionamento ou empregar as informações de maneira indevida. A Vian busca manter o conteúdo atualizado, mas pode ajustar descrições, materiais e disponibilidades sem aviso prévio.</p>
+    <h4>4. Privacidade e atualização dos termos</h4>
+    <p>O tratamento de dados pessoais realizado por meio deste site observa a Política de Privacidade (LGPD). Estes termos podem ser revisados e atualizados periodicamente para refletir mudanças operacionais, legais ou de comunicação.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var header = document.getElementById('siteHeader');
+  var toggle = document.getElementById('menuToggle');
+  var panel = document.getElementById('mobilePanel');
+
+  function onScroll(){
+    if(!header) return;
+    if(window.scrollY > 10){ header.classList.add('scrolled'); }
+    else { header.classList.remove('scrolled'); }
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  if(toggle && panel){
+    toggle.addEventListener('click', function(){
+      var open = panel.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    });
+    panel.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        panel.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+        toggle.setAttribute('aria-label','Abrir menu');
+      });
+    });
+  }
+
+  var carousel = document.getElementById('portfolioCarousel');
+  var prev = document.getElementById('prevWork');
+  var next = document.getElementById('nextWork');
+  function scrollCarousel(dir){
+    if(!carousel) return;
+    var card = carousel.querySelector('.work');
+    var amount = card ? card.getBoundingClientRect().width + 16 : carousel.clientWidth * 0.8;
+    carousel.scrollBy({left: dir * amount, behavior: 'smooth'});
+  }
+  if(prev) prev.addEventListener('click', function(){ scrollCarousel(-1); });
+  if(next) next.addEventListener('click', function(){ scrollCarousel(1); });
+
+  var lastFocus = null;
+  function openModal(id){
+    var modal = document.getElementById(id);
+    if(!modal) return;
+    lastFocus = document.activeElement;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('modal-open');
+    var closeBtn = modal.querySelector('.modal-close');
+    if(closeBtn) closeBtn.focus();
+  }
+  function closeModal(modal){
+    if(!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    if(!document.querySelector('.modal.is-open')){
+      document.body.classList.remove('modal-open');
+    }
+    if(lastFocus && typeof lastFocus.focus === 'function'){ lastFocus.focus(); }
+  }
+  document.querySelectorAll('[data-modal-open]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal(btn.getAttribute('data-modal-open'));
+    });
+  });
+  document.querySelectorAll('[data-modal-close]').forEach(function(el){
+    el.addEventListener('click', function(){
+      closeModal(el.closest('.modal'));
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' || e.key === 'Esc'){
+      document.querySelectorAll('.modal.is-open').forEach(function(m){ closeModal(m); });
+    }
+  });
+
+  var customForm = document.getElementById('customPackageForm');
+  if(customForm){
+    customForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var nameEl = document.getElementById('customName');
+      var needEl = document.getElementById('customNeed');
+      var name = nameEl ? nameEl.value.trim() : '';
+      var need = needEl ? needEl.value.trim() : '';
+      var message = 'Olá, quero um pacote personalizado com a Vian.';
+      if(name){ message += '\nNome: ' + name; }
+      if(need){ message += '\nO que preciso: ' + need; }
+      var url = 'https://wa.me/5562993075352?text=' + encodeURIComponent(message);
+      window.open(url, '_blank', 'noopener');
+    });
+  }
+
+  var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if(prefersReduced || !('IntersectionObserver' in window)){
+    items.forEach(function(el){ el.classList.add('in-view'); });
+  } else {
+    var observer = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.15});
+    items.forEach(function(el){ observer.observe(el); });
+  }
+})();
+</script>
+
+
+</body></html>
